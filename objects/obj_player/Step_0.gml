@@ -5,19 +5,19 @@ if(!game_manager && obj_game_manager) {
 	game_manager = obj_game_manager;
 }
 
-if(keyboard_check(game_manager.dash) && dash_bar > 0 && isDash) {
+if(keyboard_check(game_manager.dash) && dash_bar > 0 && is_dash) {
 	pl_movement = game_manager.player_move * dash_movement;
 	dash_bar -= dash_rate;
 	if(dash_bar <= 0) {
-		isDash = false;
+		is_dash = false;
 	}
 } else {
 	pl_movement = game_manager.player_move;
 	if(dash_bar < 100) {
 		dash_bar += dash_rate;
 	}
-	if(dash_bar >= 100 && !isDash) {
-		isDash = true;
+	if(dash_bar >= 100 && !is_dash) {
+		is_dash = true;
 		dash_bar = 100;
 	}
 }

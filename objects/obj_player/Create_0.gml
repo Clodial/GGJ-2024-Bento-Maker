@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-isDash = true;
+is_dash = true;
 
 dash_bar = 100;
 dash_rate = 1;
