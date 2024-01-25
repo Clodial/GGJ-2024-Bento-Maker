@@ -26,11 +26,11 @@ if(keyboard_check(game_manager.dash) && dash_bar > 0 && is_dash) {
 if(keyboard_check(game_manager.up)){
 	if(keyboard_check(game_manager.left) || keyboard_check(game_manager.right)) {
 		if(!place_meeting(x, y - sqrt(pl_movement), obj_wall_object_main)){
-			y -= sqrt(pl_movement);
+			y -= sqrt(pl_movement/2);
 		}
 	} else if(!keyboard_check(game_manager.down)) {
 		if(!place_meeting(x, y - sqrt(pl_movement), obj_wall_object_main)){
-			y -= pl_movement;
+			y -= pl_movement/2;
 		}
 	}
 }
@@ -39,11 +39,11 @@ if(keyboard_check(game_manager.up)){
 if(keyboard_check(game_manager.down)) {
 	if(keyboard_check(game_manager.left) || keyboard_check(game_manager.right)) {
 		if(!place_meeting(x, y + sqrt(pl_movement), obj_wall_object_main)){
-			y += sqrt(pl_movement);
+			y += sqrt(pl_movement/2);
 		}
 	} else if(!keyboard_check(game_manager.up)) {
 		if(!place_meeting(x, y + pl_movement, obj_wall_object_main)){
-			y += pl_movement;
+			y += pl_movement/2;
 		}
 	}
 }
