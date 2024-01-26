@@ -4,12 +4,12 @@
 is_dash = true;
 
 dash_bar = 100;
-dash_rate = 1;
+dash_rate = 0.25;
 
 game_manager = obj_game_manager;
 
 pl_movement = game_manager.player_move;
-dash_movement = 1.25;
+dash_movement = 2;
 
 // player states for GAME_STATE.SERVICE
 enum PLAYER_STATE {

@@ -12,7 +12,7 @@ if(game_manager.cur_state == GAME_STATE.SERVICE && self_cur_state == PLAYER_STAT
 		game_manager.cur_state = GAME_STATE.PAUSE;
 	}
 
-	if(keyboard_check(game_manager.dash) && dash_bar > 0 && is_dash) {
+	if(keyboard_check_direct(game_manager.dash) && dash_bar > 0 && is_dash) {
 		pl_movement = game_manager.player_move * dash_movement;
 		dash_bar -= dash_rate;
 		if(dash_bar <= 0) {
