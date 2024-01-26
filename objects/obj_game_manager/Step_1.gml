@@ -7,7 +7,7 @@ if(cur_state == GAME_STATE.PAUSE) {
 		cur_state = GAME_STATE.SERVICE;
 	}
 } else if(cur_state == GAME_STATE.BUILDING) {
-	if(keyboard_check_released(pause) || keyboard_check_released(cancel)) {
+	if(keyboard_check_released(cancel)) {
 		cur_state = GAME_STATE.MANAGEMENT;
 	}
 }

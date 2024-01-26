@@ -8,6 +8,10 @@ if(!game_manager && obj_game_manager) {
 // gameplay controls
 if(game_manager.cur_state == GAME_STATE.SERVICE && self_cur_state == PLAYER_STATE.PLAY) {
 
+	if(keyboard_check_released(game_manager.pause)) {
+		game_manager.cur_state = GAME_STATE.PAUSE;
+	}
+
 	if(keyboard_check(game_manager.dash) && dash_bar > 0 && is_dash) {
 		pl_movement = game_manager.player_move * dash_movement;
 		dash_bar -= dash_rate;
