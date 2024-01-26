@@ -19,6 +19,7 @@ if( keyboard_check_released(btn_confirm)
 {
 	
 	game_manager.cur_state = GAME_STATE.SERVICE;
+	game_manager.cur_song_time = 0;
 	instance_destroy(start_button);
 	instance_destroy(cancel_button);
 	instance_destroy(self);
