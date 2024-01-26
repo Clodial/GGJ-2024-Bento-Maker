@@ -11,4 +11,12 @@ game_manager = obj_game_manager;
 pl_movement = game_manager.player_move;
 dash_movement = 1.25;
 
-// game object references
+// player states for GAME_STATE.SERVICE
+enum PLAYER_STATE {
+	MINIGAME,
+	PAUSE,
+	ANIMATION,
+	PLAY
+}
+
+self_cur_state = PLAYER_STATE.PLAY;

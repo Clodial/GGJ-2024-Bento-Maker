@@ -1,5 +1,13 @@
 /// @description Global Game Variable Instantiation
 
+// helper functions
+
+font_enable_effects(font_fatfrank, true, {
+    outlineEnable: true,
+    outlineDistance: 2,
+    outlineColour: c_black
+});
+
 // enums
 enum GAME_STATE {
 	MANAGEMENT,
@@ -42,6 +50,8 @@ structure_prices = {
 	bento_maker: 20
 };
 
+menu_font = font_add(font_get_name(font_fatfrank), 200, false, false, 32, 128);
+
 //default values
 up = ord("W");
 down = ord("S");
@@ -64,6 +74,10 @@ day = 0;
 // items picked up by player will be stored here, player can only hold 3 items
 player_inventory = [GAME_INVENTORY.NONE, GAME_INVENTORY.NONE, GAME_INVENTORY.NONE];
 cur_state = GAME_STATE.MANAGEMENT
+
+cur_song_time = 0; // time for when a song is at when game is paused
+cur_song_updated = false;
+cur_song = undefined;
 
 // file setting
 init_state_file = "main_game.ini";
