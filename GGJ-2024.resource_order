@@ -26,6 +26,7 @@
     {"name":"IA_fail_state","order":8,"path":"sounds/IA_fail_state/IA_fail_state.yy",},
     {"name":"UI_select","order":19,"path":"sounds/UI_select/UI_select.yy",},
     {"name":"UI_gmda_popup_4","order":15,"path":"sounds/UI_gmda_popup_4/UI_gmda_popup_4.yy",},
+    {"name":"obj_popup_frame","order":8,"path":"objects/obj_popup_frame/obj_popup_frame.yy",},
     {"name":"obj_interactive_table_order","order":5,"path":"objects/obj_interactive_table_order/obj_interactive_table_order.yy",},
     {"name":"obj_wall_test","order":7,"path":"objects/obj_wall_test/obj_wall_test.yy",},
     {"name":"UI_back","order":10,"path":"sounds/UI_back/UI_back.yy",},

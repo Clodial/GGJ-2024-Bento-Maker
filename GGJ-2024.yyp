@@ -43,6 +43,7 @@
     {"id":{"name":"IA_fail_state","path":"sounds/IA_fail_state/IA_fail_state.yy",},},
     {"id":{"name":"UI_select","path":"sounds/UI_select/UI_select.yy",},},
     {"id":{"name":"UI_gmda_popup_4","path":"sounds/UI_gmda_popup_4/UI_gmda_popup_4.yy",},},
+    {"id":{"name":"obj_popup_frame","path":"objects/obj_popup_frame/obj_popup_frame.yy",},},
     {"id":{"name":"obj_interactive_table_order","path":"objects/obj_interactive_table_order/obj_interactive_table_order.yy",},},
     {"id":{"name":"obj_wall_test","path":"objects/obj_wall_test/obj_wall_test.yy",},},
     {"id":{"name":"UI_back","path":"sounds/UI_back/UI_back.yy",},},
