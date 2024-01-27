@@ -9,7 +9,10 @@
     "name": "shop_obj",
     "path": "folders/Objects/shop_obj.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_interactive_table",
+    "path": "objects/obj_interactive_table/obj_interactive_table.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "test_wall",
-    "path": "sprites/test_wall/test_wall.yy",
+    "name": "test_table",
+    "path": "sprites/test_table/test_table.yy",
   },
   "spriteMaskId": null,
   "visible": true,

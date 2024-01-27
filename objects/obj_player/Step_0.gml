@@ -1,5 +1,6 @@
 /// @description movement controls
 // You can write your code in this editor
+depth = layer_get_depth("Player_Layer") - (y);
 
 if(!game_manager && obj_game_manager) {
 	game_manager = obj_game_manager;
