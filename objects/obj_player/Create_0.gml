@@ -20,3 +20,4 @@ enum PLAYER_STATE {
 }
 
 self_cur_state = PLAYER_STATE.PLAY;
+closest_interactive = undefined;
