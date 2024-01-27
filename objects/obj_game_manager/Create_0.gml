@@ -64,6 +64,8 @@ click_confirm = mb_left;
 cancel = vk_backspace;
 pause = ord("P");
 
+exit_button = vk_escape;
+
 player_move = 4;
 player_currency = 100;
 player_upkeep = 0;

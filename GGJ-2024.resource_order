@@ -31,6 +31,7 @@
     {"name":"UI_back","order":10,"path":"sounds/UI_back/UI_back.yy",},
     {"name":"test_table","order":9,"path":"sprites/test_table/test_table.yy",},
     {"name":"spr_test_building","order":8,"path":"sprites/spr_test_building/spr_test_building.yy",},
+    {"name":"spr_9_slice","order":11,"path":"sprites/spr_9_slice/spr_9_slice.yy",},
     {"name":"snd_song_FocusManagement","order":1,"path":"sounds/snd_song_FocusManagement/snd_song_FocusManagement.yy",},
     {"name":"obj_interactive_table_eggs","order":3,"path":"objects/obj_interactive_table_eggs/obj_interactive_table_eggs.yy",},
     {"name":"font_roboto","order":1,"path":"fonts/font_roboto/font_roboto.yy",},
