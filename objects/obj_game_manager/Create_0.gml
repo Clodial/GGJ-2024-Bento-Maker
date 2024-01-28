@@ -155,3 +155,11 @@ if(!file_exists(init_state_file)) {
 	ini_close();
 }
 
+// create inventory items
+var inventory_item_1 = instance_create_layer(0, (room_height/2) - 100, "UI_Layer", obj_inventory_slot);
+var inventory_item_2 = instance_create_layer(0, room_height/2, "UI_Layer", obj_inventory_slot);
+var inventory_item_3 = instance_create_layer(0, (room_height/2) + 100, "UI_Layer", obj_inventory_slot);
+
+inventory_item_1.set_inventory_slot(0);
+inventory_item_2.set_inventory_slot(1);
+inventory_item_3.set_inventory_slot(2);

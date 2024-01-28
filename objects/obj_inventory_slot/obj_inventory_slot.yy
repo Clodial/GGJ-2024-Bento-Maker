@@ -1,17 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_popup_frame",
+  "name": "obj_inventory_slot",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "shop_obj",
-    "path": "folders/Objects/shop_obj.yy",
+    "name": "game_manager",
+    "path": "folders/Objects/game_manager.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_9_slice",
-    "path": "sprites/spr_9_slice/spr_9_slice.yy",
+    "name": "spr_test_inventory_box",
+    "path": "sprites/spr_test_inventory_box/spr_test_inventory_box.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -15,29 +15,33 @@ if(main_obj.cur_state == GAME_STATE.MINIGAME) {
 				if(player_inputs[player_place] == "up") {
 					player_place += 1;
 				} else {
-					instance_destroy(self);
 					main_obj.cur_state = GAME_STATE.SERVICE;
+					audio_play_sound(IA_fail_state, 1, false, 0.5);
+					instance_destroy(self);
 				}
 			} else if(keyboard_check_released(main_obj.left)) {
 				if(player_inputs[player_place] == "left") {
 					player_place += 1;
 				} else {
-					instance_destroy(self);
 					main_obj.cur_state = GAME_STATE.SERVICE;
+					audio_play_sound(IA_fail_state, 1, false, 0.5);
+					instance_destroy(self);
 				}
 			} else if (keyboard_check_released(main_obj.right)) {
 				if(player_inputs[player_place] == "right") {
 					player_place += 1;
 				} else {
-					instance_destroy(self);
 					main_obj.cur_state = GAME_STATE.SERVICE;
+					audio_play_sound(IA_fail_state, 1, false, 0.5);
+					instance_destroy(self);
 				}
 			} else if (keyboard_check_released(main_obj.down)) {
 				if(player_inputs[player_place] == "down") {
 					player_place += 1;
 				} else {
-					instance_destroy(self);
 					main_obj.cur_state = GAME_STATE.SERVICE;
+					audio_play_sound(IA_fail_state, 1, false, 0.5);
+					instance_destroy(self);
 				}
 			}
 		} else {
@@ -50,14 +54,21 @@ if(main_obj.cur_state == GAME_STATE.MINIGAME) {
 				main_obj.player_inventory[2] = "salad";
 			}
 			show_debug_message(main_obj.player_inventory);
-			instance_destroy(self);
 			main_obj.cur_state = GAME_STATE.SERVICE;
+			audio_play_sound(IA_success_state, 1, false, 0.5);
+			instance_destroy(self);
 		}
 	}
 	
 	// bento minigame
 	if(cur_state == FRAME_STATE.BENTO) {
 		
+	}
+	
+	if(keyboard_check_released(main_obj.cancel)) {
+		main_obj.cur_state = GAME_STATE.SERVICE;
+		audio_play_sound(IA_end_station, 1, false, 0.5);
+		instance_destroy(self);
 	}
 }
 
