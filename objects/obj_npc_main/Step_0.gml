@@ -24,7 +24,6 @@ if(obj_game_manager.cur_state == GAME_STATE.SERVICE || obj_game_manager.cur_stat
 			} else {
 				//set the order
 				order = obj_game_manager.set_customer_order();
-				show_debug_message(order);
 				order_taken = true;
 			}
 		}
