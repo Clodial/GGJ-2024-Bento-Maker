@@ -14,7 +14,7 @@ if(obj_game_manager.cur_state == GAME_STATE.SERVICE || obj_game_manager.cur_stat
 	}
 
 	if (npc_cur_state == NPC_STATES.MIDDLE_OF_LINE) {
-		wait_time -= wait_time_rate/4;
+		wait_time -= wait_time_rate;
 	} else if(npc_cur_state == NPC_STATES.FRONT_OF_LINE) {
 		// time rate for current place
 		wait_time -= wait_time_rate;
@@ -24,6 +24,7 @@ if(obj_game_manager.cur_state == GAME_STATE.SERVICE || obj_game_manager.cur_stat
 			} else {
 				//set the order
 				order = obj_game_manager.set_customer_order();
+				show_debug_message(order);
 				order_taken = true;
 			}
 		}

@@ -34,6 +34,7 @@ if(game_manager.cur_state == GAME_STATE.SERVICE
 	
 	//up move
 	if(keyboard_check(game_manager.up)){
+		image_index = 2;
 		if(keyboard_check(game_manager.left) || keyboard_check(game_manager.right)) {
 			if(!place_meeting(x, y - sqrt(pl_movement/2), obj_wall_object_main)){
 				y -= sqrt(pl_movement/2);
@@ -47,6 +48,7 @@ if(game_manager.cur_state == GAME_STATE.SERVICE
 
 	//down move
 	if(keyboard_check(game_manager.down)) {
+		image_index = 1;
 		if(keyboard_check(game_manager.left) || keyboard_check(game_manager.right)) {
 			if(!place_meeting(x, y + sqrt(pl_movement/2), obj_wall_object_main)){
 				y += sqrt(pl_movement/2);
@@ -60,6 +62,7 @@ if(game_manager.cur_state == GAME_STATE.SERVICE
 
 	//left move
 	if(keyboard_check(game_manager.left)) {
+		image_index = 0;
 		if(keyboard_check(game_manager.up) || keyboard_check(game_manager.down)) {
 			if(!place_meeting(x - sqrt(pl_movement), y, obj_wall_object_main)){
 				x -= sqrt(pl_movement);
@@ -73,6 +76,7 @@ if(game_manager.cur_state == GAME_STATE.SERVICE
 
 	//right move
 	if(keyboard_check(game_manager.right)) {
+		image_index = 3;
 		if(keyboard_check(game_manager.up) || keyboard_check(game_manager.down)) {
 			if(!place_meeting(x + sqrt(pl_movement),y, obj_wall_object_main)){
 				x += sqrt(pl_movement);

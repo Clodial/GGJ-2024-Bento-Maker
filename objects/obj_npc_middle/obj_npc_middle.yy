@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_test_player_sprite_iso",
-    "path": "sprites/spr_test_player_sprite_iso/spr_test_player_sprite_iso.yy",
+    "name": "Sprite27",
+    "path": "sprites/Sprite27/Sprite27.yy",
   },
   "spriteMaskId": null,
   "visible": true,

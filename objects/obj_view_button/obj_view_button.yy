@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_cancel_button",
+  "name": "obj_view_button",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "test_close_button",
-    "path": "sprites/test_close_button/test_close_button.yy",
+    "name": "test_view_button",
+    "path": "sprites/test_view_button/test_view_button.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -7,16 +7,17 @@ enum NPC_STATES {
 	FRONT_OF_LINE
 }
 
+
 npc_cur_state = NPC_STATES.FRONT_OF_LINE;
 
 currency_return = 10;
-wait_time = 500;
+wait_time = 1000;
 max_wait_time = wait_time;
 wait_time_rate = 1;
 order = ["", "", "", ""];
-order_show_time = 50;
+order_show_time = 100;
 order_timer = 0;
-order_show_time_rate = 10;
+order_show_time_rate = 1;
 
 order_taken = false;
 order_complete = false;

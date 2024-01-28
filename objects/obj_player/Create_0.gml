@@ -6,6 +6,7 @@
 //dash_bar = 100;
 //dash_rate = 0.25;
 
+image_speed = 0;
 game_manager = obj_game_manager;
 
 pl_movement = game_manager.player_move;
