@@ -54,6 +54,11 @@ if(main_obj.cur_state == GAME_STATE.MINIGAME) {
 			main_obj.cur_state = GAME_STATE.SERVICE;
 		}
 	}
+	
+	// bento minigame
+	if(cur_state == FRAME_STATE.BENTO) {
+		
+	}
 }
 
 

@@ -21,7 +21,7 @@ minigame_pass = false;
 image_yscale = 3;
 image_xscale = 3;
 
-possible_inputs = ["up", "down", "left", "right"];
+possible_inputs = ["down", "left", "right", "up"];
 
 // salad minigame items
 player_place = 0;
