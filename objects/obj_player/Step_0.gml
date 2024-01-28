@@ -83,12 +83,6 @@ if(game_manager.cur_state == GAME_STATE.SERVICE
 			}
 		}
 	}
-	
-	if(closest_interactive.player_near) {
-		if(keyboard_check_released(game_manager.button_confirm)) {
-			
-		}
-	}
 }
 
 

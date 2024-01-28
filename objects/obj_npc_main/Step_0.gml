@@ -3,7 +3,7 @@
 
 depth = layer_get_depth("Player_Layer") - (y);
 
-if(obj_game_manager.cur_state == GAME_STATE.SERVICE) {
+if(obj_game_manager.cur_state == GAME_STATE.SERVICE || obj_game_manager.cur_state == GAME_STATE.MINIGAME) {
 	if(wait_time <= 0) {
 		instance_destroy(self);
 	}

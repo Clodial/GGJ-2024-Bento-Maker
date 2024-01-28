@@ -1,5 +1,6 @@
 /// @description Global Game Variable Instantiation
 game_set_speed(60, gamespeed_fps);
+randomize(); // deactivate on testing specific changes
 // helper functions
 game_inventory = ["rice", "eggs", "salad", "meat"];
 function set_customer_order() {
