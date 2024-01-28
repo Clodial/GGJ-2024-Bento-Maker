@@ -5,11 +5,11 @@
 if(cur_state == GAME_STATE.MANAGEMENT && !audio_is_playing(snd_song_FocusManagement)){
 	audio_stop_all()
 	cur_song_updated = false;
-	cur_song = audio_play_sound(snd_song_FocusManagement,  50, true, 1, cur_song_time);
+	cur_song = audio_play_sound(snd_song_FocusManagement,  50, true, 0.1, cur_song_time);
 } else if(cur_state == GAME_STATE.SERVICE && !audio_is_playing(snd_song_focusUpServeFinal)) {
 	audio_stop_all()
 	cur_song_updated = false;
-	cur_song = audio_play_sound(snd_song_focusUpServeFinal,  50, true, 1, cur_song_time);
+	cur_song = audio_play_sound(snd_song_focusUpServeFinal,  50, true, 0.1, cur_song_time);
 } else if(cur_state == GAME_STATE.PAUSE || cur_state == GAME_STATE.BUILDING) {
 	if(!cur_song_updated) {
 		cur_song_time = audio_sound_get_track_position(cur_song);

@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-is_dash = true;
+//is_dash = true;
 
-dash_bar = 100;
-dash_rate = 0.25;
+//dash_bar = 100;
+//dash_rate = 0.25;
 
 game_manager = obj_game_manager;
 

@@ -1,6 +1,14 @@
 /// @description Global Game Variable Instantiation
-
+game_set_speed(60, gamespeed_fps);
 // helper functions
+game_inventory = ["rice", "eggs", "salad", "meat"];
+function set_customer_order() {
+	var ran1 = irandom(array_length(game_inventory) - 1);
+	var ran2 = irandom(array_length(game_inventory) - 1);;
+	var ran3 = irandom(array_length(game_inventory) - 1);;
+	var ran4 = irandom(array_length(game_inventory) - 1);;
+	return [game_inventory[ran1], game_inventory[ran2], game_inventory[ran3], game_inventory[ran4]]
+}
 
 font_enable_effects(font_fatfrank, true, {
     outlineEnable: true,
@@ -14,6 +22,7 @@ enum GAME_STATE {
 	BUILDING,
 	STORY,
 	SERVICE,
+	MINIGAME,
 	PAUSE,
 	CUTSCENE
 }
@@ -27,7 +36,8 @@ enum GAME_INVENTORY {
 }
 
 enum KITCHEN_STRUCTURE {
-	STOVE,
+	MEAT_STOVE,
+	EGG_STOVE,
 	RICE_POT,
 	SALAD_MAKER,
 	BENTO_MAKER,
@@ -74,7 +84,7 @@ max_day_timer = 120; //how long is each bento service
 day = 0;
 
 // items picked up by player will be stored here, player can only hold 3 items
-player_inventory = [GAME_INVENTORY.NONE, GAME_INVENTORY.NONE, GAME_INVENTORY.NONE];
+player_inventory = ["", "", ""];
 cur_state = GAME_STATE.MANAGEMENT
 
 cur_song_time = 0; // time for when a song is at when game is paused

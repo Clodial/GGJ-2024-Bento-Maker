@@ -7,7 +7,6 @@
 
 if(instance_exists(obj_player)) {
 	if(obj_player.closest_interactive == id) {
-		show_debug_message("have become main");
 		if(point_distance(x, y, obj_player.x, obj_player.y) <= 140){
 			player_near = true;
 		} else {

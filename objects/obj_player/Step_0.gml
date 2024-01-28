@@ -14,23 +14,23 @@ if(game_manager.cur_state == GAME_STATE.SERVICE
 		game_manager.cur_state = GAME_STATE.PAUSE;
 	}
 
-	if(keyboard_check_direct(game_manager.dash) 
-		&& dash_bar > 0 && is_dash) {
-		pl_movement = game_manager.player_move * dash_movement;
-		dash_bar -= dash_rate;
-		if(dash_bar <= 0) {
-			is_dash = false;
-		}
-	} else {
-		pl_movement = game_manager.player_move;
-		if(dash_bar < 100) {
-			dash_bar += dash_rate;
-		}
-		if(dash_bar >= 100 && !is_dash) {
-			is_dash = true;
-			dash_bar = 100;
-		}
-	}
+	//if(keyboard_check_direct(game_manager.dash) 
+	//	&& dash_bar > 0 && is_dash) {
+	//	pl_movement = game_manager.player_move * dash_movement;
+	//	dash_bar -= dash_rate;
+	//	if(dash_bar <= 0) {
+	//		is_dash = false;
+	//	}
+	//} else {
+	//	pl_movement = game_manager.player_move;
+	//	if(dash_bar < 100) {
+	//		dash_bar += dash_rate;
+	//	}
+	//	if(dash_bar >= 100 && !is_dash) {
+	//		is_dash = true;
+	//		dash_bar = 100;
+	//	}
+	//}
 	
 	//up move
 	if(keyboard_check(game_manager.up)){
@@ -81,6 +81,12 @@ if(game_manager.cur_state == GAME_STATE.SERVICE
 			if(!place_meeting(x + pl_movement,y, obj_wall_object_main)){
 				x += pl_movement;
 			}
+		}
+	}
+	
+	if(closest_interactive.player_near) {
+		if(keyboard_check_released(game_manager.button_confirm)) {
+			
 		}
 	}
 }
