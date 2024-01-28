@@ -3,11 +3,9 @@
 // Inherit the parent event
 event_inherited();
 
-time_to_burn = 150;
-time_to_finish_max = 120;
-time_to_finish = 100;
-finish_rate = 1;
-
+cooking_meter = 200;
+cur_cooking_meter = 0;
+cooking_rate = 1;
+food_cook_min = 120;
+food_cook_max = 150;
 is_cooking = false;
-
-station = "eggs";
