@@ -1,4 +1,21 @@
 /// @description Global Game Variable Instantiation
+game_set_speed(60, gamespeed_fps);
+randomize(); // deactivate on testing specific changes
+// helper functions
+game_inventory = ["rice", "eggs", "salad", "meat"];
+function set_customer_order() {
+	var ran1 = irandom(array_length(game_inventory) - 1);
+	var ran2 = irandom(array_length(game_inventory) - 1);;
+	var ran3 = irandom(array_length(game_inventory) - 1);;
+	var ran4 = irandom(array_length(game_inventory) - 1);;
+	return [game_inventory[ran1], game_inventory[ran2], game_inventory[ran3], game_inventory[ran4]]
+}
+
+font_enable_effects(font_fatfrank, true, {
+    outlineEnable: true,
+    outlineDistance: 2,
+    outlineColour: c_black
+});
 
 // enums
 enum GAME_STATE {
@@ -6,7 +23,9 @@ enum GAME_STATE {
 	BUILDING,
 	STORY,
 	SERVICE,
-	PAUSE
+	MINIGAME,
+	PAUSE,
+	CUTSCENE
 }
 
 enum GAME_INVENTORY {
@@ -18,7 +37,8 @@ enum GAME_INVENTORY {
 }
 
 enum KITCHEN_STRUCTURE {
-	STOVE,
+	MEAT_STOVE,
+	EGG_STOVE,
 	RICE_POT,
 	SALAD_MAKER,
 	BENTO_MAKER,
@@ -41,6 +61,8 @@ structure_prices = {
 	bento_maker: 20
 };
 
+menu_font = font_add(font_get_name(font_fatfrank), 200, false, false, 32, 128);
+
 //default values
 up = ord("W");
 down = ord("S");
@@ -53,6 +75,8 @@ click_confirm = mb_left;
 cancel = vk_backspace;
 pause = ord("P");
 
+exit_button = vk_escape;
+
 player_move = 4;
 player_currency = 100;
 player_upkeep = 0;
@@ -61,8 +85,12 @@ max_day_timer = 120; //how long is each bento service
 day = 0;
 
 // items picked up by player will be stored here, player can only hold 3 items
-player_inventory = [GAME_INVENTORY.NONE, GAME_INVENTORY.NONE, GAME_INVENTORY.NONE];
+player_inventory = ["", "", ""];
 cur_state = GAME_STATE.MANAGEMENT
+
+cur_song_time = 0; // time for when a song is at when game is paused
+cur_song_updated = false;
+cur_song = undefined;
 
 // file setting
 init_state_file = "main_game.ini";
@@ -127,3 +155,11 @@ if(!file_exists(init_state_file)) {
 	ini_close();
 }
 
+// create inventory items
+var inventory_item_1 = instance_create_layer(0, (room_height/2) - 100, "UI_Layer", obj_inventory_slot);
+var inventory_item_2 = instance_create_layer(0, room_height/2, "UI_Layer", obj_inventory_slot);
+var inventory_item_3 = instance_create_layer(0, (room_height/2) + 100, "UI_Layer", obj_inventory_slot);
+
+inventory_item_1.set_inventory_slot(0);
+inventory_item_2.set_inventory_slot(1);
+inventory_item_3.set_inventory_slot(2);
